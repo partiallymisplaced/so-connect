@@ -1,0 +1,23 @@
+{
+  "name": "so-connect",
+  "version": "1.0.0",
+  "description": "Social Network for developers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+
+  },
+  "author": "partiallymisplaced",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.17",
+    "nodemon": "^1.18.4",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.7.1"
+  }
+}
