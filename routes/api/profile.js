@@ -39,8 +39,6 @@ router.get('/', passport.authenticate('jwt', {session: false}),
 
 router.post('/', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        let errors = {};
-
         const { errors, isValid } = validateProfileInput(req.body);
 
         if(!isValid) {
@@ -262,7 +260,7 @@ router.delete(
 
 router.delete(
     '/education/:education_id',
-    passport('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     (req, res) => {
         Profile.findOne({ user: req.user.id })
             .then(profile => {
